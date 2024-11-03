@@ -1,3 +1,4 @@
+-- Use the `ref` function to select from other models-
 
 SELECT
     o.ID as O_ID,
@@ -7,7 +8,14 @@ SELECT
     o.Order_Date,
     o.status,
     o._etl_loaded_at
+    p.paymentmethod as payment_method
+    p.satus as payment_status
+    p.amount
+    p.created
+    p.orderid as order_id
 FROM
     dbt-tutorial.jaffle_shop.orders o
 JOIN
-    {{ ref("stg_customers") }} c ON o.ID = c.ID
+    {{ ref("stg_customers") }} c ON o.O_ID = c.ID
+JOIN
+    dbt-tutorial.stripe.payment p ON p.id= o.id
