@@ -18,4 +18,4 @@ FROM
 JOIN
     {{ ref("stg_customers") }} c ON o.O_ID = c.ID
 JOIN
-    dbt-tutorial.stripe.payment p ON p.id= o.id
+    dbt-tutorial.data_prep.stripe_payments p ON p.id= o.id
