@@ -1,1 +1,4 @@
-create or replace table `testdbfordbt-440311`.`dbt_gp`.`stg_customers`
+SELECT
+  *
+FROM
+  dbt-tutorial.jaffle_shop.customers
