@@ -9,7 +9,7 @@ SELECT
     o.status,
     o._etl_loaded_at,
     p.paymentmethod as payment_method,
-    p.satus as payment_status,
+    p.status as payment_status,
     p.amount,
     p.created,
     p.orderid as order_id,
