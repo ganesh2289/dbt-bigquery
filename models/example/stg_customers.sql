@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 With stg_customers AS (
    SELECT
       id,first_name,last_name,
@@ -6,3 +7,13 @@ With stg_customers AS (
 )
 
 Select * from stg_customers
+=======
+With stg_customers AS (
+   SELECT
+      id,first_name,last_name,
+      CONCAT(first_name, ' ', last_name) as customer_name,
+         FROM dbt-tutorial.jaffle_shop.customers
+)
+
+Select * from stg_customers
+>>>>>>> e67fa7b4e83309531c9dd696094c1f6d715f9bac
