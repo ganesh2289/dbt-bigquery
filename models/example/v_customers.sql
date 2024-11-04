@@ -1,3 +1,5 @@
+--{{config(materialized='view')}}
+
 With stg_customers AS (
    SELECT
       id,first_name,last_name,
